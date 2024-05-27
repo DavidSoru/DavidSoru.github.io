@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Catcher</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <audio id="samba">
+            <source type="audio/mp3" src="/sounds/samba.mp3">
+        </audio>
+        <audio id="audioIntro" autoplay>
+            <source type="audio/mp3" src="/sounds/intro.mp3">
+        </audio>
+        <audio id="audioMalo">
+            <source type="audio/mp3" src="/sounds/vidamenos.mp3">
+        </audio>
+        <audio id="audioBueno">
+            <source type="audio/mp3" src="/sounds/punto.mp3">
+        </audio>
+        <audio id="audioPerder">
+            <source type="audio/mp3" src="/sounds/perder.mp3">
+        </audio>
+        <audio id="audioFinal">
+            <source type="audio/mp3" src="/sounds/final.mp3">
+        </audio>
+        <div id="intro" class="intro" onclick="startGame()">
+            <p id="start-text" class="start-text">Haz click en la pantalla para empezar</p>
+            <div id="finalSquare" class="finalSquare-none">
+                <p id="endMessage">¡Se acabó!</p>
+                <div class="sep">
+                    <img id="ptsImg" src="img/bombilla.png">
+                    <p id="finalPoints">: 0 pts</p>
+                </div>
+                <div class="sep">
+                    <img id="ptsImg" src="img/reloj.png">
+                    <p id="finalTime">: 0m 0s</p>
+                </div>
+                <div class="buttons">
+                    <button class="buttonMenu" onclick="playAgain()">Jugar de nuevo</button>
+                    <button class="buttonMenu">Salir</button>
+                </div>
+            </div>
+        </div>
+        <div id="arcade" class="arcade">
+            <img id="vidas-img" draggable="false" class="vidas" src="img/tresvidas.png">
+            <img draggable="false" class="gametitle" src="img/titlethin.png">
+            <div class="info">
+                <p id="time">01:40</p>
+                <p id="puntgood">Puntos: 0</p>
+            </div>
+        </div>
+        
+        <img id="player" draggable="false" class="player" src="/img/cart.png">
+            
+            
+            
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

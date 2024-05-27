@@ -1,0 +1,234 @@
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro {
+    background: #00000080;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: 3s;
+}
+
+.start-text {
+    filter: drop-shadow(2px 2px 2px #000);
+    font-size: 50px;
+    padding: 15px;
+    animation: text-highlight 1s infinite ease-in-out;
+}
+
+.intro:hover {
+    cursor: pointer;
+}
+
+.run-anim-fade-out {
+    animation: fade-out 1s forwards;
+}
+
+.run-anim-fade-in {
+    animation: fade-out 1s backwards;
+}
+
+@keyframes fade-out {
+    0%{opacity: 100%;}
+    100%{opacity: 0%;display: none;}
+}
+
+@keyframes big-slide-down {
+    0%{transform: translateY(-100px);opacity: 0%;}
+    100%{transform: translateY(0);opacity: 100%;}
+}
+
+#audio {
+    display: none
+}
+
+.vidas {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.arcade {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: 10px;
+    transform: translateY(-80px);
+    transition: 3s;
+}
+
+.arcade-run-anim-slide {
+    animation: slide-down 1s forwards;
+}
+
+@keyframes slide-down {
+    0%{transform: translateY(-80px)}
+    100%{transform: translateY(0px);}
+}
+
+p {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.player {
+    width: 100px;
+    height: 80px;
+    transition: transform 0.2s;
+    position: absolute;
+    z-index: 2;
+}
+
+.game-container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/img/brazil-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+
+.gametitle {
+    height: 60px;
+}
+
+.bulb-yellow {
+    filter: drop-shadow(0px -8px 26px #e1ff00);
+}
+
+.bulb-red {
+    filter: drop-shadow(0px -8px 26px #ff0000);
+}
+
+.run-anim-roja {
+    animation: glow-rojo 0.5s ease-in-out;
+}
+
+.run-anim-amarilla {
+    animation: glow-amarillo 0.5s ease-in-out;
+}
+
+@keyframes glow-rojo { 
+    0% {filter: drop-shadow(0px 0 0 black)}
+    50% {filter: drop-shadow(0px -4px 5px #ff0000)}
+    100% {filter: drop-shadow(0px 0 0 black)}
+}
+
+@keyframes glow-amarillo {
+    0% {filter: drop-shadow(0px 0 0 black)}
+    50% {filter: drop-shadow(0px -4px 5px #e1ff00)}
+    100% {filter: drop-shadow(0px 0 0 black)}
+}
+
+@keyframes text-highlight {
+    0% {opacity: 0%;}
+    50% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+.finalSquare {
+    position: relative;
+    width: 70vh;
+    height: 70vh;
+    border: 10px solid white;
+    box-shadow:   -15px 0 0 0 white,
+                 15px 0 0 0 white,
+                 0 -15px 0 0 white,
+                 0 15px 0 0 white;
+                 background: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 0px black);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: big-slide-down 3s forwards;
+}
+
+.finalSquare-none {
+    display: none;
+}
+
+.finalSquare > p, .finalSquare > div > p {
+    color: black;
+    font-size: 40px;
+}
+
+.sep {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+#endMessage {
+    font-size: 50px;
+    margin: 0 0 50px;
+}
+
+#ptsImg {
+    width: 60px;
+}
+
+
+.buttons {
+    position: absolute;
+    top: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.buttonMenu {
+    color: white;
+    font-size: 30px;
+    box-shadow:   -5px 0 0 0 #000,
+                 5px 0 0 0 #000,
+                 0 -5px 0 0 #000,
+                 0 5px 0 0 #000;
+                 background: #000;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+}
+
+.buttonMenu:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+#buttonPlayAgain {
+    top: 90%; /* Ajusta la posición vertical según tus necesidades */
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+#buttonExit {
+    top: 90%; /* Ajusta la posición vertical según tus necesidades */
+    left: 75%;
+    transform: translateX(-50%);
+}

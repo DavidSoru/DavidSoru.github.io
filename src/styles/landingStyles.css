@@ -7,6 +7,10 @@
     --white: #FAECE3;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 *::-webkit-scrollbar {
     width: 16px;
 }
@@ -47,9 +51,6 @@
     overflow: hidden;
 }
 
-.text {
-    background-image: url(../img/sand-bg.jpg);
-}
 
 #moonsImg {
     position: absolute;
@@ -143,3 +144,335 @@
     background-image: url(../img/bg5.png);
 }
 
+#project-header {
+    background-image: url(../img/sand-bg.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.overflow-temp {
+    overflow-y: hidden;
+}
+
+#proj-tit {
+    font-family: 'Gill Sans MT';
+    font-weight: 600;
+    font-size: 4em;
+    margin: 1em 0 0 0;
+}
+
+#proj-sub {
+    font-family: "Mulish";
+    font-size: 1.5em;
+    max-width: 800px;
+    text-align: center;
+}
+
+#planet-chooser {
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.planets {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planets > img {
+    max-width: 500px;
+    transition: 0.2s;
+}
+
+.planets > img:hover {
+    max-width: 500px;
+    transition: 0.5s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#left-planet > img {
+    animation: rotate 15s infinite ease-in-out;
+    animation-delay: 4s;
+}
+
+
+#right-planet > img {
+    animation: rotate 17s infinite ease-in-out;
+}
+
+.planets > h2 {
+    font-family: 'Gill Sans MT';
+    margin: 0;
+    color: #FAECE3;
+    font-weight: 600;
+    font-size: 5em;
+    position: absolute;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(30deg);
+    }
+    40% {
+        transform: rotate(20deg);
+    }
+    60% {
+        transform: rotate(90deg);
+    }
+    80% {
+        transform: rotate(70deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#project-daw {
+    background-image: url(../img/sand-bg.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 1em 0;
+}
+
+.none-temp {
+    display: none;
+}
+
+.year {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 3em;
+    margin: 1em 0 0 0;
+}
+
+.proj-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator > div {
+    background-color: #1D1C1C;
+    height: 100%;
+    width: 10%;
+    border-radius: 25px;
+}
+
+.left-sect, .right-sect {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.left-sect > .proj-card {
+    width: 100%;
+    background-color: #1d1c1c6a;
+    border-radius: 5px 80px 5px 80px;
+    padding: 1em;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.right-sect > .proj-card {
+    width: 100%;
+    background-color: #1d1c1c6a;
+    border-radius: 80px 5px 80px 5px;
+    padding: 1em;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.proj-card > h3 {
+    font-family: "Mulish";
+    font-weight: 800;
+    color: #FAECE3;
+    font-style: italic;
+}
+
+.proj-card > img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card-end {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em 0;
+    padding-left: 1em;
+}
+
+.card-end > p {
+    color: #FAECE3;
+    font-family: "Mulish";
+}
+
+b {
+    color: #F15A25;
+}
+
+.card-end > button {
+    border-radius: 40px 5px 40px 5px;
+    background-color: #1D6ADC;
+    color: #FAECE3;
+    font-family: "Mulish";
+    font-weight: 800;
+    font-size: 1.25em;
+    transition: 0.2s;
+}
+
+.card-end > button:hover {
+    border-radius: 40px 40px 40px 40px;
+    background-color: #1D6ADC;
+    color: #FAECE3;
+    font-family: "Mulish";
+    font-weight: 800;
+    font-size: 1.35em;
+}
+
+.card-end > a > button {
+    border-radius: 40px 5px 40px 5px;
+    background-color: #1D6ADC;
+    color: #FAECE3;
+    font-family: "Mulish";
+    font-weight: 800;
+    font-size: 1.25em;
+    transition: 0.2s;
+}
+
+.card-end > a > button:hover {
+    border-radius: 40px 40px 40px 40px;
+    background-color: #1D6ADC;
+    color: #FAECE3;
+    font-family: "Mulish";
+    font-weight: 800;
+    font-size: 1.35em;
+}
+
+.dev-tit {
+    text-align: end;
+}
+
+.dev-com {
+    color: #FAECE3;
+    font-family: "Mulish";
+    font-size: 1.25em;
+    padding: 1em;
+}
+
+@keyframes move {
+    to {
+        /* Move horizontally so that right edge is aligned against the viewport */
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+#sectionPin {
+    /* Stretch it out, so that we create room for the horizontal scroll animation */
+    height: 500vh;
+    overflow: visible;
+    /* To make position sticky work … */
+
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
+
+    background-color: #1D1C1C;
+}
+
+.pin-wrap-sticky {
+    /* Stick to Top */
+    height: 100vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.pin-wrap {
+    height: 100vh;
+    width: 250vmax;
+
+    /* Hook animation */
+    will-change: transform;
+    animation: linear move forwards;
+
+    /* Link animation to view-timeline */
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pin-wrap > h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FAECE3;
+    font-size: 5em;
+    font-weight: 600;
+    margin: 0 0 0 5em;
+}
+
+.skill-tit {
+    font-family: 'Gill Sans MT';
+    font-weight: 600;
+    font-size: 3em;
+    margin: 1em 0 0 0;
+    color: #FAECE3;
+}
+
+.skill-card {
+    margin: 0 0 0 30vw;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(2px 2px 2px black);
+    border-radius: 25px;
+    background-color: #0b0b0b;
+    padding: 1em;
+}
+
+.skill-box > p {
+    font-family: "Mulish";
+    color: #FAECE3;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+}
+
+#contact-footer {
+    height: 50vh;
+    background-image: url(../img/sand-bg.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    gap: 3em
+}
