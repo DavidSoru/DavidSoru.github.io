@@ -256,3 +256,7 @@ function endGame () {
 function playAgain() {
     location.reload();
 }
+
+function closeTab() {
+    window.close();
+}

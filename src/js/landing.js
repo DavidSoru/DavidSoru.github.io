@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   document.getElementById("pomodoro").addEventListener('click', () => {
-    window.location.href = 'pomodoro/pomodoro-project/index.html'; // Reemplaza con la URL de tu página
+    window.open('pomodoro/pomodoro-project/index.html', "_blank"); // Reemplaza con la URL de tu página
   });
 
   document.getElementById("game").addEventListener('click', () => {
-    window.location.href = 'game/index.html'; // Reemplaza con la URL de tu página
+    window.open('game/index.html', "_blank"); // Reemplaza con la URL de tu página
   });
