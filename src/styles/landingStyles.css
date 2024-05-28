@@ -476,3 +476,23 @@ b {
     flex-direction: row;
     gap: 3em
 }
+
+.left-card-anim {
+    transform-origin: right;
+    animation: rotl 1s forwards ease-in-out;
+}
+
+@keyframes rotl {
+    from {transform: rotateY(90deg)}
+    to {transform: rotateY(0deg)}
+}
+
+.right-card-anim {
+    transform-origin: left;
+    animation: rotr 1s forwards ease-in-out;
+}
+
+@keyframes rotr {
+    from {transform: rotateY(90deg)}
+    to {transform: rotateY(0deg)}
+}

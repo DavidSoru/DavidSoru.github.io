@@ -14,3 +14,42 @@ leftCards.forEach(element => {
     rightCards[cont].style.height = computedHeight;
     cont++;
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observerLeft = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('left-card-anim');
+          return;
+        }
+
+        entry.target.classList.remove('left-card-anim');
+      });
+    });
+  
+    const elements = document.querySelectorAll('.left-sect > .proj-card');
+    elements.forEach(element => observerLeft.observe(element));
+
+    const observerRight = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('right-card-anim');
+            return;
+          }
+
+          entry.target.classList.remove('right-card-anim');
+        });
+      });
+    
+      const elementsr = document.querySelectorAll('.right-sect > .proj-card');
+      elementsr.forEach(element => observerRight.observe(element));
+  });
+  
+
+  document.getElementById("pomodoro").addEventListener('click', () => {
+    window.location.href = 'pomodoro/pomodoro-project/index.html'; // Reemplaza con la URL de tu página
+  });
+
+  document.getElementById("game").addEventListener('click', () => {
+    window.location.href = 'game/index.html'; // Reemplaza con la URL de tu página
+  });

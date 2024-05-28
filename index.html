@@ -62,7 +62,7 @@
                         <img src="src/img/bulbcatcher.PNG">
                         <div class="card-end">
                             <p class="col-md-9">¡Ponemos toda la carne en el asador! Seguimos con <b>mi primer juego hecho en JavaScript</b>, el cual formó parte de un proyecto grupal</p>
-                            <button class="col-md-3">Saber más</button>
+                            <button id="game" class="col-md-3">Saber más</button>
                         </div>
                     </div>
                 </div>
@@ -93,6 +93,57 @@
                         <br>
                         <br>
                         Operar correctamente con el <b>movimiento</b> y las <b>colisiones</b> de los elementos en la pantalla fue todo un desafío, pero estoy muy satisfecho con el resultado.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="year">2024</h3>
+            <div class="proj-section col-md-12">
+                <div class="left-sect col-md-5">
+                    <div class="proj-card">
+                        <h3>Calculadora de propinas</h3>
+                        <img src="src/img/calcupropinas.PNG">
+                        <div class="card-end">
+                            <p class="col-md-9">¡Mi primer proyecto con <b>JavaScript</b>! Empezamos con algo sencillo para aprender a extraer valores de formularios y operar con ellos</p>
+                            <button class="col-md-3">Saber más</button>
+                        </div>
+                    </div>
+                    <div class="proj-card">
+                        <h3>Pomodoro Task Manager</h3>
+                        <img src="src/img/pomodoro.PNG">
+                        <div class="card-end">
+                            <p class="col-md-9">Seguimos aprendiendo <b>JavaScript</b>, esta vez con un gestor de tareas en formato de tablero kanban con un temporizador de Pomodoros</p>
+                            <button id="pomodoro" class="col-md-3">Saber más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator col-md-1">
+                    <div></div>
+                </div>
+                <div class="right-sect col-md-5">
+                    <div class="proj-card">
+                        <h3 class="dev-tit">Comentarios del dev</h3>
+                        <p class="dev-com">Pese a ser un proyecto sencillo,
+                            con la calculadora de propinas me introduje
+                            en los <b>conceptos básicos de JavaScript</b> que más iba a usar.
+                        <br>
+                        <br>Además de <b>comunicar elementos mediante sus id</b>
+                         y <b>extraer valores de formularios</b>, también aprendí algunas <b>funciones
+                        matemáticas</b> para dividir y redondear números. Ideal para operar con precios.</p>
+                    </div>
+                    <div class="proj-card">
+                        <h3 class="dev-tit">Comentarios del dev</h3>
+                        <p class="dev-com">Probablemente uno de mis proyectos favoritos. Desde la parte del <b>diseño</b>, hecho con <b>Figma</b>,
+                        me ha encantado construir la <b>identidad visual</b> de esta página, inspirándome en los colores de Italia, sus restaurantes,
+                        y la <b>paleta de colores</b> del famosísimo Pizza Tower.
+                        <br>
+                        <br>
+                        Una vez más, disfruto muchísimo haciendo la <b>maquetación</b> con <b>CSS</b>, para que todo quede tal y como en el prototipo.
+                        <br>
+                        <br>
+                        En lo que respecta a la programación, este proyecto me ha ayudado a trabajar la <b>creación de elementos</b> de
+                        forma más compleja, a jugar con los <b>eventos</b> para hacer el <b>drag and drop</b>, y a construir un
+                        <b>temporizador</b> con fechas que además se comunica con los estilos para hacer una <b>animación</b>.
                     </p>
                     </div>
                 </div>
@@ -147,7 +198,7 @@
 <script>
     $(window).scroll(function() {
         var winScroll = $(this).scrollTop();
-        console.log(winScroll);
+        // console.log(winScroll);
         $('#title-div').css({
             'transform': 'translate(0, ' + winScroll / (window.width / 300) + '%)'
         });

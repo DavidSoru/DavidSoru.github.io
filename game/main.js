@@ -14,7 +14,7 @@ audioIntro.play();
 audioIntro.loop = true;
 let arcadeBanner = document.getElementById("arcade");
     let introDiv = document.getElementById("intro");
-const vidasrc = ["/img/sinvidas.png", "/img/unavida.png", "/img/dosvidas.png", "/img/tresvidas.png"];
+const vidasrc = ["img/sinvidas.png", "img/unavida.png", "img/dosvidas.png", "img/tresvidas.png"];
 function fallLoop(frequencyy) {
     timerr = setInterval(displayRandomPic, frequencyy);
 }
@@ -51,10 +51,10 @@ function displayRandomPic() {
     let typeBulb = Math.floor(Math.random() * (101 - 1) + 1);
 
     if(typeBulb >= ranBulb) {
-        img.src= "/img/bombilla.png";
+        img.src= "img/bombilla.png";
         img.classList.add("bulb-yellow");
     } else if (typeBulb < ranBulb) {
-        img.src= "/img/bombillamala.png";
+        img.src= "img/bombillamala.png";
         img.classList.add("bulb-red");
     }
     
