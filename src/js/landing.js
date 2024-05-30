@@ -46,10 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-  document.getElementById("pomodoro").addEventListener('click', () => {
-    window.open('pomodoro/pomodoro-project/index.html', "_blank"); // Reemplaza con la URL de tu página
-  });
+document.getElementById("pomodoro").addEventListener('click', () => {
+  window.open('pomodoro/pomodoro-project/index.html', "_blank"); // Reemplaza con la URL de tu página
+});
 
-  document.getElementById("game").addEventListener('click', () => {
-    window.open('game/index.html', "_blank"); // Reemplaza con la URL de tu página
-  });
+document.getElementById("game").addEventListener('click', () => {
+  window.open('game/index.html', "_blank"); // Reemplaza con la URL de tu página
+});
+
+let fletxa = document.getElementById("fletxa");
+const myTimeout = setTimeout(function () {
+  fletxa.style.display = "block";
+}, 5000);
