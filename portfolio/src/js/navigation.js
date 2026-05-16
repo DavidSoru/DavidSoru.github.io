@@ -197,3 +197,7 @@ createStars(document.querySelector('.stars-front'), 50, 3);
 document.getElementById("bulbcatcher").addEventListener('click', () => {
   window.open('../../../game/index.html', "_blank"); // Reemplaza con la URL de tu página
 });
+
+document.getElementById("eclipsebooks").addEventListener('click', () => {
+  window.open('https://drive.google.com/file/d/1zd2nzIk0wmdMJwU43tADOUtziSITCjSw/view?usp=sharing', "_blank"); // Reemplaza con la URL de tu página
+});

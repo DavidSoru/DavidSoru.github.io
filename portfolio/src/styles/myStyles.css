@@ -286,7 +286,7 @@ a > img {
 }
 
 
-#aboutme {
+#aboutme, #daw, #marp {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -337,4 +337,13 @@ a > img {
 
 .lunabg > img {
     width: 80px;
+}
+
+.leftdaw > h2 {
+    margin: 0;
+}
+
+#aboutmeright > img {
+    max-width: 40vw;
+    border-radius: 10px;
 }
