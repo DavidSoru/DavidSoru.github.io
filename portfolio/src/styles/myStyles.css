@@ -165,6 +165,55 @@ body {
     font-family: 'fontitle';
     font-weight: normal;
     font-style: normal;
+    margin: 5vh 0;
+}
+
+.astrodaw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    
+    
+}
+
+.astrodaw > img {
+    max-width: 512px;
+    scale: 1;
+    transition: 0.5s ease-in-out;
+    animation: rotate 17s infinite ease-in-out;
+}
+
+.astrodaw > img:hover {
+    scale: 1.1;
+}
+
+.project-title {
+    color: var(--white);
+    font-size: 3vw;
+    font-family: 'fontitle';
+    font-weight: normal;
+    font-style: normal;
+    position: absolute;
+    margin: 0;
+    filter: drop-shadow(10px 5px 10px black);
+}
+
+.subtitle {
+    color: var(--white);
+    font-size: 2vw;
+    font-family: 'fontsub';
+    font-weight: normal;
+    font-style: normal;
+    margin: 5vh 0;
+}
+
+.text {
+    color: var(--black);
+    font-size: 1.5vw;
+    font-family: 'fonttext';
+    font-weight: normal;
+    font-style: normal;
 }
 
 .navbar {
@@ -234,4 +283,58 @@ a > img {
     100% {
         transform: rotate(0deg);
     }
+}
+
+
+#aboutme {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#aboutmeleft {
+    width: 30vw;
+}
+
+#aboutmeleft > img {
+    width: 20vw;
+    border-radius: 10px;
+}
+
+#aboutmeright {
+    margin: 25vh 0;
+    width: 40vw;
+    padding: 10px 30px;
+    height: fit-content;
+    background-color: var(--white)!important;
+    border-radius: 10px;
+}
+
+#lunaspr {
+    display: flex;
+    flex-direction: row;
+}
+
+.lunabg {
+    background-image: url(../img/moon.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    width: fit-content;
+    padding: 30px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.lunabg:hover {
+    width: 100px;
+}
+
+.lunabg > img {
+    width: 80px;
 }

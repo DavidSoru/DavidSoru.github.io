@@ -1,5 +1,7 @@
-
+window.scrollTo(0, 0);
+history.scrollRestoration = "manual";
 const links = document.querySelectorAll ('a');
+const astros = document.querySelectorAll ('.astros');
 const ufo = document.querySelector('.ufo-cursor');
 const ufoSrc = document.getElementById('ufo-img');
 
@@ -56,6 +58,16 @@ links.forEach(link => {
     });
 
     link.addEventListener('mouseleave', () => {
+        ufoSrc.classList.remove('ufo-glow');
+    });
+});
+
+astros.forEach(astro => {
+    astro.addEventListener('mouseenter', () => {
+        ufoSrc.classList.add('ufo-glow');
+    });
+
+    astro.addEventListener('mouseleave', () => {
         ufoSrc.classList.remove('ufo-glow');
     });
 });
@@ -181,3 +193,7 @@ function createStars(layer, count, size) {
 createStars(document.querySelector('.stars-back'), 120, 1);
 createStars(document.querySelector('.stars-mid'), 80, 2);
 createStars(document.querySelector('.stars-front'), 50, 3);
+
+document.getElementById("bulbcatcher").addEventListener('click', () => {
+  window.open('../../../game/index.html', "_blank"); // Reemplaza con la URL de tu página
+});
