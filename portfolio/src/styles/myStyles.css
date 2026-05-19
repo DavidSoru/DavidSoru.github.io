@@ -178,7 +178,7 @@ body {
 }
 
 .astrodaw > img {
-    max-width: 512px;
+    max-width: 27vw;
     scale: 1;
     transition: 0.5s ease-in-out;
     animation: rotate 17s infinite ease-in-out;
